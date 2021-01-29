@@ -14,6 +14,7 @@ app.use('/', (req, res) => {
 ```
 **nosub_app.js**를 이용하시면 됩니다.  
   
+
 ## 서브 도메인을 이용하고 싶다면,
 먼저 제 ip.json 서비스의 구조는 다음과 같습니다.  
 1. http://ip.leed.at 접속 -> return 301 https://ip.leed.at 
