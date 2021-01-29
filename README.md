@@ -20,7 +20,7 @@ nosub_app.js를 이용하시면 됩니다.
 2. https://ip.leed.at 에서 -> proxy_pass http://leed.at:7777
 3. http://leed.at:7777 (node.js) 에서 `request.header['x-forwarded-for']`를 return
 
-만약 **서브 도메인을 이용하지 않는다면**에서의 코드를 그대로 이용한다면,  
+만약 [서브 도메인을 이용하지 않는다면](https://github.com/nant0313/ip.json#%EC%84%9C%EB%B8%8C-%EB%8F%84%EB%A9%94%EC%9D%B8%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%EB%A9%B4)에서의 코드를 그대로 이용한다면,  
 누가 접속하던, 127.0.0.1 만 로그에 찍힙니다.  
 **2번**의 proxy_pass를 해주는 과정에서, 사용자가 서버에 접속한 기록이 묻히고
 새로 https://ip.leed.at 서버가 http://leed.at:7777 서버에 접속한 기록만 남기 때문에
@@ -54,7 +54,7 @@ server {
   
 ### 2. proxy_pass 시에 x-forwarded-for 헤더 지정
 그냥 nginx에서 기본적으로 제공하는 x-forwarded-for 헤더를 이용하면
-원 접속자의 ip를 헤더에 저장한 상태로 proxy_pass를 진행할 수 있습니다.
+원 접속자의 ip를 헤더에 저장한 상태로 proxy_pass를 진행할 수 있습니다.  
 [nginx docs.](https://www.nginx.com/resources/wiki/start/topics/examples/forwarded/#how-to-use-it-in-nginx)
 
 ```nginx
