@@ -1,11 +1,11 @@
 # ip.json
 접속자의 ip를 return 해주는 프로그램을 작성해봅시다!  
-ip주소를 return 해주는 해외 api들의 속도가 너무 느려, 직접 구현해 보았습니다.
+ip주소를 return 해주는 해외 api들의 속도가 너무 느려 직접 구현해 보았습니다.
 
 **nginx**를 기준으로 작성하였습니다.
 
 ## 서브 도메인을 이용하지 않는다면
-http://leed.at:7777에서 바로 ip 주소를 return 하기를 원한다면,
+http://leed.at:7777 에서 바로 ip 주소를 return 하기를 원한다면,
 다음과 같은 코드를 작성하면 됩니다.
 ```js
 app.use('/', (req, res) => {
