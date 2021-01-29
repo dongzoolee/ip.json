@@ -2,7 +2,7 @@
 접속자의 ip를 return 해주는 프로그램을 작성해봅시다!  
 ip주소를 return 해주는 해외 api들의 속도가 너무 느려 직접 구현해 보았습니다.
 
-**nginx**를 기준으로 작성하였습니다.
+**nginx**를 기준으로 작성하였고, https://ip.leed.at 에서 이용해보실 수 있습니다.
 
 ## 서브 도메인을 이용하지 않는다면
 http://leed.at:7777 에서 바로 ip 주소를 return 하기를 원한다면,
@@ -12,7 +12,7 @@ app.use('/', (req, res) => {
     res.json({ ip: req.connection.remoteAddress })
 })
 ```
-nosub_app.js를 이용하시면 됩니다.  
+**nosub_app.js**를 이용하시면 됩니다.  
   
 ## 서브 도메인을 이용하고 싶다면,
 먼저 제 ip.json 서비스의 구조는 다음과 같습니다.  
@@ -95,4 +95,4 @@ server {
 	}
 }
 ```
-app.js 소스코드를 이용하시면 됩니다.  
+**app.js** 및 **nginx.conf** 소스코드를 이용하시면 됩니다.  
