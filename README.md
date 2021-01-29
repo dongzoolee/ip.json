@@ -18,7 +18,7 @@ nosub_app.js를 이용하시면 됩니다.
 먼저 제 ip.json 서비스의 구조는 다음과 같습니다.  
 1. http://ip.leed.at 접속 -> return 301 https://ip.leed.at 
 2. https://ip.leed.at 에서 -> proxy_pass http://leed.at:7777
-3. http://leed.at:7777 (node.js) 에서 request.header['x-forwarded-for']를 return
+3. http://leed.at:7777 (node.js) 에서 `request.header['x-forwarded-for']`를 return
 
 만약 **서브 도메인을 이용하지 않는다면**에서의 코드를 그대로 이용한다면,  
 누가 접속하던, 127.0.0.1 만 로그에 찍힙니다.  
